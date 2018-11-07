@@ -15,5 +15,5 @@
     "mocha.env": {
         "TS_NODE_PROJECT": "tsconfig.json"
     },
-    "mocha.files.glob": "test/*.ts",
+    "mocha.files.glob": "test/*.test.ts",
 }

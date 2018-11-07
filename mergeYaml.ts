@@ -2,7 +2,7 @@
 import { diffLines, IDiffResult } from 'diff';
 
 export function mergeYaml(org: string, orgConvered: string, modified: string) {
-    const result = diffLines(org, orgConvered, { ignoreCase: false, ignoreWhitespace: true })
+    const result = diffLines(org, modified)
     const lines = org.split('\n');
     let idxLine = 0;
     const newYaml = [];
@@ -33,6 +33,7 @@ export function mergeYaml(org: string, orgConvered: string, modified: string) {
             }
             idxLine += diffResult.count;
         } else if (diffResult.added) {
+            newYaml.push(diffResult.value.replace(/\n$/mg, ''))
         } else {
             for (let i = 0; i < diffResult.count; i += 1) {
                 newYaml.push(next())

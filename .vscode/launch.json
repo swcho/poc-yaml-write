@@ -18,6 +18,30 @@
                 "ts-node/register"
             ],
             "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+            "env": {
+                "TS_NODE_PROJECT": "tsconfig.json"
+            },
+            "cwd": "${workspaceRoot}",
+            "args": [
+                "-u",
+                "tdd",
+                "-r",
+                "ts-node/register",
+                "--timeout",
+                "999999",
+                "--grep",
+                "handles array push last",
+                "--colors",
+                "test/*.test.ts"
+            ],
+            "sourceMaps": true,
+            "internalConsoleOptions": "openOnSessionStart"
         }
     ]
 }
