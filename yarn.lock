@@ -303,6 +303,11 @@ wrappy@1:
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
 
+yaml-ast-parser@^0.0.41:
+  version "0.0.41"
+  resolved "https://registry.yarnpkg.com/yaml-ast-parser/-/yaml-ast-parser-0.0.41.tgz#e120d6933d11c1da091ad824e091eb5e3248cfdb"
+  integrity sha512-GLPSVaFy8yjnWFoSoGqQ3cOBmq3h8/SnB1yj6p3GR9OmIG43z8ZgmIbZVRG2a7zvfOJt2fL99v8PPm2dV+8dNA==
+
 yn@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/yn/-/yn-2.0.0.tgz#e5adabc8acf408f6385fc76495684c88e6af689a"

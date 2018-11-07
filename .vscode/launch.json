@@ -36,7 +36,7 @@
                 "--timeout",
                 "999999",
                 "--grep",
-                "handles array push last",
+                "ast parser test",
                 "--colors",
                 "test/*.test.ts"
             ],
