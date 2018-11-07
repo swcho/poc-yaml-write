@@ -1,0 +1,19 @@
+{
+    "mocha.showInExplorer": true,
+    "mocha.options": {
+        "compilers": "ts-node/register"
+    },
+    "mocha.requires": [
+        "ts-node/register"
+    ],
+    "mocha.sideBarOptions": {
+        "lens": true,
+        "decoration": true,
+        "autoUpdateTime": 2000,
+        "showDebugTestStatus": true
+    },
+    "mocha.env": {
+        "TS_NODE_PROJECT": "tsconfig.json"
+    },
+    "mocha.files.glob": "test/*.ts",
+}

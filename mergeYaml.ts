@@ -1,20 +1,7 @@
 
-import { merge, diffLines, IDiffResult } from 'diff';
-import { load, dump } from 'js-yaml'
-import { readFileSync } from 'fs';
+import { diffLines, IDiffResult } from 'diff';
 
-function get_fixture(name: string) {
-    return readFileSync(`fixtures/${name}`).toString();
-}
-
-function load_fixture(name: string) {
-    const text = readFileSync(`fixtures/${name}`).toString();
-    const json = load(text);
-    const jsonStr = dump(json);
-    return [text, json, jsonStr];
-}
-
-function mergeYaml(org: string, orgConvered: string, modified: string) {
+export function mergeYaml(org: string, orgConvered: string, modified: string) {
     const result = diffLines(org, orgConvered, { ignoreCase: false, ignoreWhitespace: true })
     const lines = org.split('\n');
     let idxLine = 0;
@@ -59,14 +46,3 @@ function mergeYaml(org: string, orgConvered: string, modified: string) {
 
     return newYaml.join('\n');
 }
-
-console.log('yaml write')
-
-const [org, json, converted] = load_fixture('array.yaml');
-
-const yamlMerged = mergeYaml(org, converted, '');
-
-const result = diffLines(org, yamlMerged)
-// const merged = merge(converted, org, '');
-
-console.log('finished')
